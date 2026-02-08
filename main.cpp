@@ -1,5 +1,6 @@
 #include <iostream> // for std::cout
 #include <vector>
+#include <string>
 using namespace std;
 int main()
 {
@@ -22,22 +23,45 @@ int main()
     //     cout << i << " ";
     // }
     
-    string fruits[] = {"apple", "banana", "orange"};
+    // string fruits[] = {"apple", "banana", "orange"};
 
-    cout << fruits[2] << endl;
+    // cout << fruits[2] << endl;
 
-    vector<int> numbers;
-    numbers.push_back(10);
-    numbers.push_back(20);
+    // vector<int> numbers;
+    // numbers.push_back(10);
+    // numbers.push_back(20);
 
-    cout << numbers.size() << endl;
-    cout << numbers[0] << endl;
+    // cout << numbers.size() << endl;
+    // cout << numbers[0] << endl;
 
-    for (int num : numbers ) {
-        cout << num << " ";
+    // for (int num : numbers ) {
+    //     cout << num << " ";
+    // }
+
+    // numbers.pop_back();
+
+    string greeting = "Hello";
+    string name = "World";
+
+    string message = greeting + " " + name + "!";
+
+    cout << message.length() << endl;
+    cout << message[0] << endl;
+
+    cout << message.substr(0, 5);
+    cout << message.find("World");
+    cout << message.replace(6, 5, "C++");
+
+    string fullName;
+
+    getline(cin, fullName);
+
+    if (fullName.length() > 0) {
+        cout << fullName;
     }
+    
 
-    numbers.pop_back();
+
 
     return 0;
 }
