@@ -86,14 +86,28 @@ int main()
     //     cout << fullName;
     // }
     
-    int num = 3;
+    // int num = 3;
 
-    cout << calculateDistance(0, 0, 20, 20) << endl;
-    cout << add(4, 3) << endl;
-    cout << add(3.2, 2.3)<< endl;
+    // cout << calculateDistance(0, 0, 20, 20) << endl;
+    // cout << add(4, 3) << endl;
+    // cout << add(3.2, 2.3)<< endl;
     
-    incrementByValue(num);
+    // incrementByValue(num);
 
-    cout << num << endl;
+    // cout << num << endl;
+
+    int value = 30;
+    int * ptr = &value;
+
+    cout << "Value: " << value << endl; // 30
+    cout << "Address: " << &value << endl; // address of where 30 is stored
+    cout << "Pointer: " << ptr << endl; // address 
+    cout << "Dereferenced: " << *ptr << endl; // 30
+
+    value = 25; 
+    cout << "Value: " << value << endl;
+
+    *ptr = 20;
+    cout << "Dereferenced Pointer Value: " << *ptr << endl;
     return 0;
 }
