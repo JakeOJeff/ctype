@@ -20,6 +20,14 @@ double add(double a, double b){
 double calculateDistance(int x1, int y1, int x2, int y2){
     return sqrt( pow(y2 - y1,2) + pow(x2 - x1, 2) ) ;
 }
+
+void incrementByValue(int x) {
+    x = x + 1; // Increments copy x
+}
+
+void incrementByReference(int& x) {
+    x = x + 1 ;// Increment reference aka the original 
+}
 int main()
 {
     // int age = 25;
@@ -78,9 +86,14 @@ int main()
     //     cout << fullName;
     // }
     
-    cout << calculateDistance(0, 0, 20, 20);
-    cout << add(4, 3);
-    cout << add(3.2, 2.3);
+    int num = 3;
 
+    cout << calculateDistance(0, 0, 20, 20) << endl;
+    cout << add(4, 3) << endl;
+    cout << add(3.2, 2.3)<< endl;
+    
+    incrementByValue(num);
+
+    cout << num << endl;
     return 0;
 }
